@@ -7,7 +7,7 @@ use cmake::Config;
 
 fn main(){
     println!("cargo:rustc-link-search={}", "c_code/");
-    println!("cargo:rustc-link-lib=static=winbgim");
+    println!("cargo:rustc-link-lib=static=bgi");
     println!("cargo:rerun-if-changed=c_code/wrapper.h");
     let bindings = bindgen::Builder::default()
         .header("c_code/wrapper.h")
