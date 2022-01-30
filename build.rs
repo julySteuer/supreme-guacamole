@@ -1,9 +1,13 @@
 extern crate bindgen;
 
 use std::env;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
+use std::fs;
+use cmake::Config;
 
 fn main(){
+    println!("cargo:rustc-link-search={}", "c_code/");
+    println!("cargo:rustc-link-lib=static=winbgim");
     println!("cargo:rerun-if-changed=c_code/wrapper.h");
     let bindings = bindgen::Builder::default()
         .header("c_code/wrapper.h")
