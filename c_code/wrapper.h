@@ -1,2 +1,2 @@
-//#include "winbgim.h"
+#include "winbgim.h"
 #include "graphics.h"

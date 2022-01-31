@@ -6,3 +6,6 @@
 5. add msbuild.exe to the path
 6. ```msbuild.exe ./Project.sln # or whatever your .sln name is```
 7. copy bgi.lib to c_code
+## Error
+Solve by linking windows.h and winuser.h 
+Install windows sdk!
